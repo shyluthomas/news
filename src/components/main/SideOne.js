@@ -37,8 +37,8 @@ let normalNews = newsCollection?.filter((item) => item.newsRank === 0);
                 { topNews ? 
                     <div>
                         <div className='side-one-btm-rht-imagecol'>
-                        { topNews[0].image.map((item) => {
-                            return (<img src={item} alt="norm" width='50%' ></img>)
+                        { topNews[0].image.map((item, index) => {
+                            return (<img key={`${index}`} src={item} alt="norm" width='50%' ></img>)
                         })}
                            
                         </div>

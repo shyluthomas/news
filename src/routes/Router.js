@@ -10,17 +10,18 @@ const Main = Loadable(lazy(() => import("../views/Main")));
 
 const ThemeRoutes = [
   {
-    path: "/",
+    path: "/home",
     element: <FullLayout />,
     children: [
-      { path: "/", element: <Navigate to="/home" /> },
+      { path: "/home", element: <Navigate to="/home" /> },
       { path: "/home", exact: true, element: <Home /> },          
       { path: "*", element: <Navigate to="/auth/404" /> },
     ],    
   },
   {
-    path: "/main",
+    path: "/",
     children: [
+      { path: "/", element: <Navigate to="/main" /> },
       { path: "/main", exact: true, element: <Main /> },          
       { path: "*", element: <Navigate to="/auth/404" /> },
     ],
