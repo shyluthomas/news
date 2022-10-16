@@ -15,7 +15,7 @@ const Home = () => {
   const newsCollection = useSelector((state) => state.news.newsCollection);
   useEffect(() => {
     dispatch(FetchLatestNews(true));
-  },[]);
+  },[dispatch]);
   useEffect(() => {
     if(latestNews.length > 0) {
       const homeData = latestNews.filter((item) => item.collectiontype === 'home');
@@ -24,7 +24,7 @@ const Home = () => {
         dispatch(FetchNewsCollection(homeData[0]?.collectionid));
       }       
     }
-  },[latestNews]);
+  },[latestNews, dispatch]);
 
   console.log('first,',latestNews)
   return (

@@ -7,15 +7,17 @@ const FullLayout = Loadable(lazy(() => import("../layouts/FullLayout")));
 
 const Home = Loadable(lazy(() => import("../views/Home")));
 const Main = Loadable(lazy(() => import("../views/Main")));
+const Error = Loadable(lazy(() => import("../views/auth/Error")));
 
 const ThemeRoutes = [
   {
     path: "/home",
     element: <FullLayout />,
     children: [
-      { path: "/home", element: <Navigate to="/home" /> },
       { path: "/home", exact: true, element: <Home /> },          
-      { path: "*", element: <Navigate to="/auth/404" /> },
+      { path: "*", element: <Navigate to="/404" /> },
+      { path: '404', element: <Error /> },
+
     ],    
   },
   {
@@ -23,7 +25,8 @@ const ThemeRoutes = [
     children: [
       { path: "/", element: <Navigate to="/main" /> },
       { path: "/main", exact: true, element: <Main /> },          
-      { path: "*", element: <Navigate to="/auth/404" /> },
+      { path: "*", element: <Navigate to="/404" /> },
+      { path: '404', element: <Error /> },
     ],
     
   },    
