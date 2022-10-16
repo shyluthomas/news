@@ -2,20 +2,20 @@
 Basic layout News home page, react redux, bootstrap
 
 # Dependencies
-Node version : v14.19.1
-React version : > 17
-Application dependancies are added in package.
-Reactstrap : bootsrap framwork for React
-Feather icons
-material icons
+1. Node version : v14.19.1
+2. React version : > 17
+3. Application dependancies are added in package.
+4. Reactstrap : bootsrap framwork for React
+5. Feather icons
+6. material icons
 
 
 Steps to Run the application
 
-steps 1 : Clone the repositary : "git clone git@github.com:shyluthomas/news.git"
-steps 2 :  go to the app directory : "cd news"
-steps 3 : intsall the dependancies : "npm i"
-step 4: run the app by : "npm run start"
+1. steps 1 : Clone the repositary : "git clone git@github.com:shyluthomas/news.git"
+2. steps 2 :  go to the app directory : "cd news"
+3. steps 3 : intsall the dependancies : "npm i"
+4. step 4: run the app by : "npm run start"
 
 Default route is directed to /main
 
